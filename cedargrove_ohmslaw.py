@@ -32,15 +32,15 @@ def ohms_law(ohms=None, milliamperes=None, volts=None):
         raise ValueError("At least two values must be provided.")
 
     # Calculate resistance in Ohms
-    if ohms == None:
+    if ohms is None:
         return volts / (milliamperes / 1000.0)
 
     # Calculate current in milliamperes (mA)
-    if milliamperes == None:
+    if milliamperes is None:
         return (volts / ohms) * 1000.0
 
     # Calculate voltage in volts
-    if volts == None:
+    if volts is None:
         return ohms * (milliamperes / 1000.0)
 
     raise ValueError("Too many values. Only two are needed.")
